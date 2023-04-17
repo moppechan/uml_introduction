@@ -1,0 +1,11 @@
+@startuml ユースケース図
+actor 利用者
+rectangle キャンペーン予約{
+usecase ログインする
+usecase キャンペーン価格にする
+usecase (<u>予約する</u>\n拡張点\nキャンペーン中) as yoyaku
+}
+利用者-->yoyaku
+yoyaku.>ログインする:<<include>>
+キャンペーン価格にする.>yoyaku:<<extend>>
+@enduml
