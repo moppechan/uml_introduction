@@ -1,5 +1,5 @@
- @startuml ホテル利用者と部屋と予約
- left to right direction
+@startuml ホテル利用者と部屋と予約
+left to right direction
 class 利用者{
 -名前
 -住所
