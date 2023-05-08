@@ -1,4 +1,8 @@
 @startuml クラス図
+class 社員{
+- 社員名:String
+- 社員ID:int   
+}
 class 正社員{
 - 社員名:String
 - 社員ID:int
@@ -12,6 +16,7 @@ class 派遣{
 - 社員ID:int
 }
 
-正社員 <|-down- 契約社員
-正社員 <|-down- 派遣
+社員 <|-down- 正社員
+社員 <|-down- 契約社員
+社員 <|-down- 派遣
 @enduml
