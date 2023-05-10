@@ -1,6 +1,14 @@
 @startuml オブジェクト図
-object "<u>車情報: 車</u>" as car {
+left to right direction
+object 車 {
 車種
-    
+値段
 }
+object タイヤ {
+左前輪タイヤ    
+右前輪タイヤ
+左後輪タイヤ
+右後輪タイヤ
+}
+車 "1" -- "4" タイヤ
 @enduml

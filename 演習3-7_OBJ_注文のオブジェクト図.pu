@@ -33,8 +33,10 @@ object "<u>商品:プロジェクタ</u>" as pro {
 商品名=プロジェクタ
 型式=P1122    
 }
-vip -- order
-user1 -- order2
+vip -- order:注文
+user1 -- order2:注文
+user2 -- pro:見る
 order -- tv
+order -- rei
 order2 -- rei
 @enduml
