@@ -1,0 +1,40 @@
+@startuml 注文
+left to right direction
+object "<u>重要顧客:髙橋洋平さん</u>" as vip {
+氏名=髙橋洋平
+住所      
+}
+object "<u>顧客:髙田利恵さん</u>" as user1 {
+氏名=髙田理恵 
+住所   
+}
+object "<u>顧客:大坪直之さん</u>" as user2 {
+氏名=大坪直之
+住所  
+}
+object "<u>注文:高橋洋平さん</u>" as order {
+注文=テレビ(型式V12345)2台,
+冷蔵庫(型式R8765)1台 
+注文日=11月21日    
+}
+object "<u>注文:髙田理恵さん</u>" as order2 {
+注文=冷蔵庫(型式R8765)1台
+注文日=12月23日   
+}
+object "<u>商品:テレビ</u>" as tv {
+商品名=テレビ
+型式=V12345    
+}
+object "<u>商品:冷蔵庫</u>" as rei {
+商品名=冷蔵庫
+型式=R8765    
+}
+object "<u>商品:プロジェクタ</u>" as pro {
+商品名=プロジェクタ
+型式=P1122    
+}
+vip -- order
+user1 -- order2
+order -- tv
+order2 -- rei
+@enduml

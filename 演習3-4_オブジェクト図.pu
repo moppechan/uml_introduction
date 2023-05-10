@@ -1,0 +1,6 @@
+@startuml オブジェクト図
+object "<u>車情報: 車</u>" as car {
+車種
+    
+}
+@enduml
