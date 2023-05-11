@@ -1,0 +1,5 @@
+@startuml 商品情報検索
+hide footbox
+actor ":会員" as user
+
+@enduml
