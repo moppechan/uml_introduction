@@ -1,4 +1,26 @@
 @startuml Web画像検索
 hide footbox
+skinparam style strictuml
 
+    actor ":ユーザ" as user
+    participant ":<u>ブラウザ</u>" as bro
+    participant ":<u>Webサーバー</u>" as web
+    participant ":<u>画像サーバー</u>" as pic
+
+    mainframe sd 画像検索
+    activate user
+        user -> bro: 画像のリンクボタンを押す
+        activate bro
+            bro -> web: 画像のファイル名を探す
+            activate web
+                web -> pic: 画像のファイル名を検索
+                activate pic
+                    pic -> pic: 画像ファイルを探す
+                    web <<-- pic:画像ファイル
+                deactivate pic
+                bro <<-- web:画像ファイル
+            deactivate web
+            user <<-- bro:画像の閲覧
+        deactivate bro
+    deactivate user
 @enduml
