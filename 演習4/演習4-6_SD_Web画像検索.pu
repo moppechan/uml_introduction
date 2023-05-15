@@ -7,7 +7,6 @@ skinparam style strictuml
     participant ":<u>Webサーバー</u>" as web
     participant ":<u>画像サーバー</u>" as pic
 
-    mainframe sd 画像検索
     activate user
         user -> bro: 画像のリンクボタンを押す
         activate bro

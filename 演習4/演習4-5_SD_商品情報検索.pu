@@ -4,7 +4,6 @@ actor ":会員" as user
 participant "<<boundary>>\n :<u>商品検索画面</u>" as boundary
 participant "<<control>>\n :<u>商品検索コントローラ</u>" as control
 
-    mainframe sd 商品検索
         activate user
             user -> boundary: 商品検索(商品番号)
             activate boundary
