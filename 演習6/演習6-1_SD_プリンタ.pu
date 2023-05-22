@@ -1,14 +1,9 @@
 @startuml プリンタ
 left to right direction
 state プリンタ{
-    state entry <<entrypoint>>
-    state exit <<exitpoint>>
-    entry --> 待機中
-    待機中 --> 印刷中
-    印刷中 -up-> 用紙なし
-    用紙なし --> 待機中
-    印刷中 -down-> exit
+    待機中 --> 印刷中 : 印刷開始
+    待機中 -up-> 用紙なし : 用紙切れ
+    印刷中 --> 待機中 : 印刷完了
+    用紙なし --> 待機中 : 用紙補充
 }
-[*] --> entry
-exit --> [*]
 @enduml
