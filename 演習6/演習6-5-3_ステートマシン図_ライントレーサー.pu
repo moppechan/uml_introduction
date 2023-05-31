@@ -1,4 +1,5 @@
 @startuml ライントレーサー
+left to right direction
 電源SW_OFF --> 電源SW_ON : スイッチを入れる
 電源SW_ON --> 電源SW_OFF : スイッチを切る
 state 電源SW_ON {
